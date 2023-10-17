@@ -29,7 +29,7 @@ const client = new Client({
 
 // TOKEN //
 
-client.login("NDM5MTQyMDM4NDIwNTg2NDk2.GiOEVs.y1QF0wPToXYCrZ2hEsMF-e2S69GX99t7iBlqBw");
+client.login(DISCORD_TOKEN);
 
 // PREFIX
 
