@@ -2,8 +2,9 @@ import dotenv from "dotenv";
 import axios from "axios";
 dotenv.config();
 
-import { Client, GatewayIntentBits, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, ActivityType, EmbedBuilder } from "discord.js";
+import { Client, GatewayIntentBits, Collection, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, ActivityType, EmbedBuilder, REST, Routes } from "discord.js";
 import { SlashCommandBuilder } from "discord.js";
+import fs from "fs";
 
 // SETTINGS //
 
@@ -28,6 +29,8 @@ const client = new Client({
 });
 
 // TOKEN //
+const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
+const GUILD_ID = process.env.GUILD_ID;
 
 client.login(DISCORD_TOKEN);
 
@@ -197,5 +200,19 @@ client.on("messageCreate", async message=>{
     //taco
     else if (message.content.startsWith('x!taco' || 'x!Taco')){
         message.reply(":rainbow: :regional_indicator_t: :regional_indicator_a: :regional_indicator_c: :regional_indicator_o:   :regional_indicator_s: :regional_indicator_e: :regional_indicator_n: :regional_indicator_s: :regional_indicator_e: :regional_indicator_i: ");
+    }
+});
+
+// SLASH COMMANDS FOR register-commands.js
+
+client.on("interactionCreate",interaction=>{
+    if(!interaction.isChatInputCommand());
+    console.log(`Command Name: ${interaction.commandName}`);
+
+    if(interaction.commandName==="hey"){
+        interaction.reply("encantado!");
+    }
+    if(interaction.commandName==="ping"){
+        interaction.reply("pong");
     }
 });
