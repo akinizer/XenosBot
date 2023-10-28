@@ -23,12 +23,23 @@ const rest = new REST({version:"10"}).setToken(DISCORD_TOKEN);
         console.log("Registering slash commands...");
 
         await rest.put(
+            Routes.applicationCommands( 
+                CLIENT_ID
+                //GUILD_ID
+            ),
+            {body: commands}
+        );
+
+        /* // FOR GUILD SPECIFIC COMMANDS
+        await rest.put(
             Routes.applicationGuildCommands(
-                CLIENT_ID, 
+                CLIENT_ID,
                 GUILD_ID
             ),
             {body: commands}
         );
+        */
+
         console.log("Slash commands are registered successfully!");
     }
     catch(e){
