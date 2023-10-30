@@ -14,8 +14,6 @@ export default async function loglist(interaction){
 
     //store edited messages
     let datajson = JSON.parse(fs.readFileSync(fileName,"utf-8"));
-
-    console.log(datajson);
    
     if (Array.isArray(datajson)){
         console.log("JSON Array");

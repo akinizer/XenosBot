@@ -11,6 +11,8 @@ import help from "./actions/serverCommands/help.js";
 import logs from "./actions/serverCommands/logs.js";
 import loglist from "./actions/serverCommands/loglist.js";
 
+import hey from "./actions/funCommands/hey.js";
+
 // SETTINGS //
 
 const client = new Client({
@@ -232,7 +234,7 @@ client.on("interactionCreate", async interaction=>{
 
     // FUN COMMANDS
     if(interaction.commandName==="hey"){
-        interaction.reply("encantado!");
+       hey(interaction);
     }
 
     if(interaction.commandName==="ping"){
