@@ -12,7 +12,11 @@ Prefix Commands:
 * bot information card
 * creator logo display command
 * streamer mode for Twitch,
+* edit autologger for a logging channel
 
 Slash Commands:
 * greeting command
 * ping-pong
+* hey
+* edit log list
+* help
