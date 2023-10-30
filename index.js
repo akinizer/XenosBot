@@ -9,6 +9,7 @@ import fs from "fs";
 
 import help from "./actions/serverCommands/help.js";
 import logs from "./actions/serverCommands/logs.js";
+import loglist from "./actions/serverCommands/loglist.js";
 
 // SETTINGS //
 
@@ -53,7 +54,7 @@ client.on('messageUpdate', (oldMess, newMess) => {
 
     if(oldMess.author.bot) return;
 
-    logs(oldMess,newMess,LOGCHANNEL_ID);   
+    logs(oldMess,newMess,LOGCHANNEL_ID,true);   
  });
 
 // activity functions on comment
@@ -246,7 +247,7 @@ client.on("interactionCreate", async interaction=>{
     }
 
     if(interaction.commandName==="logs"){
-        logs(interaction);
+        loglist(interaction);
     }
     
 });

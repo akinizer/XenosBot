@@ -3,7 +3,7 @@ import fs from "fs";
 import path,{dirname} from "path";
 import { fileURLToPath } from 'url';
 
-export default async function logs(oldMess,newMess,LOGCHANNEL_ID,logtofile=false){
+export default async function logs(oldMess,newMess,LOGCHANNEL_ID,logtofile){
     const charmaxlimit = 1950; // character limit: 1950
     const uneditedMess = oldMess.content.slice(0,charmaxlimit) + (oldMess.content.length > charmaxlimit ? "..." : "");  // if original message is over character limit, replace extreme part with "..."
     const editedMess = newMess.content.slice(0,charmaxlimit) + (newMess.content.length > charmaxlimit ? "..." : "");    // if edited message is over character limit, replace extreme part with "..."
@@ -23,13 +23,17 @@ export default async function logs(oldMess,newMess,LOGCHANNEL_ID,logtofile=false
     }
     
     if(logtofile){
+        console.log("Logging to file...");
+
         //store edited messages
         let editedjson = fs.readFileSync(fileName,"utf-8");
-        let logs = JSON.parse(editedjson);
+        
+        let logs = [];
+        logs.push(JSON.parse(editedjson));
 
-        logs.push({oldMess:oldMess,newMess:newMess,author:author,channel:LOGCHANNEL_ID});
+        logs.push({"oldMess":oldMess,"newMess":newMess,"author":newMess.author,"channel":LOGCHANNEL_ID});
         editedjson = JSON.stringify(logs);
-        fs.writeFileSync(fileName,usersjson,"utf-8");
+        fs.writeFileSync(fileName,editedjson,"utf-8");
     }
 
     //send edited message as a log to log channel with channelID
