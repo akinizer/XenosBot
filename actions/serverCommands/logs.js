@@ -21,33 +21,47 @@ export default async function logs(oldMess,newMess,LOGCHANNEL_ID,logtofile){
     if(newMess.attachments.size > 0){
         embedMessage.addFields(`Extensions:`,`${newMess.attachments.map(a=>a.url)}`,true);
     }
-    
-    let newData = {"oldMess":oldMess,"newMess":newMess,"author":newMess.author,"channel":LOGCHANNEL_ID};
+
+    //send edited message as a log to log channel with channelID
+    await newMess.guild.channels.cache.get(LOGCHANNEL_ID).send({embeds: [embedMessage]});   
+        
+    let newData = {"newUrl":newMess.url,"newAuth":newMess.author,"newChannel":newMess.channel,"newMess":uneditedMess,"oldMess":editedMess};
+
+    console.log(logtofile);
 
     if(logtofile){
 
-        //if file doesnt exist, format: {JSON}
+        //if file doesnt exist, format: [ {JSON_1} ]
         if (!fs.existsSync(fileName)) {
             console.log("Creating edited.json with new data...")
-            fs.writeFileSync(fileName,JSON.stringify(newData));
+            fs.writeFileSync(fileName,JSON.stringify([newData]));
+            console.log("jsonformat");
         }
 
         //append data, format: [ {JSON_1}, {JSON_2}, ... {JSON_N} ]
         else{
             console.log("Logging to file...");
+            try{
+                //store edited messages
+                let editedjson = fs.readFileSync(fileName,"utf-8");
+                const jsonelement = JSON.parse(editedjson);
+                console.log(Object.keys(jsonelement).length);
 
-            //store edited messages
-            let editedjson = fs.readFileSync(fileName,"utf-8");
+                let logs = [];
+                for(let item of jsonelement){
+                    logs.push(item);
+                }
+                
+                logs.push(newData);                     //file contents with new data
+                let res = JSON.stringify(logs);
+                fs.writeFileSync(fileName,res,"utf-8");
+                console.log("array");
             
-            let logs = [];
-            logs.push(JSON.parse(editedjson));  //file contents
-            logs.push(newData); //file contents with new data
-            editedjson = JSON.stringify(logs);
-            fs.writeFileSync(fileName,editedjson,"utf-8");
+            }
+            catch(e){
+                console.log(e);
+            }
         }
     }
-
-    //send edited message as a log to log channel with channelID
-    newMess.guild.channels.cache.get(LOGCHANNEL_ID).send({embeds: [embedMessage]});
-    
+   
 }
