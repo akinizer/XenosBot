@@ -25,7 +25,10 @@ export default async function logs(oldMess,newMess,LOGCHANNEL_ID,logtofile){
     //send edited message as a log to log channel with channelID
     await newMess.guild.channels.cache.get(LOGCHANNEL_ID).send({embeds: [embedMessage]});   
         
-    let newData = {"newUrl":newMess.url,"newAuth":newMess.author,"newChannel":newMess.channel,"newMess":uneditedMess,"oldMess":editedMess};
+    //let newData = {"newUrl":newMess.url,"newAuth":newMess.author,"newChannel":newMess.channel,"newMess":uneditedMess,"oldMess":editedMess};
+    let newData = {"desc":  `A [comment](${newMess.url}) has been edited by ${newMess.author} in ${newMess.channel}.
+    **On Create**: \`\`\`${uneditedMess}\`\`\`
+    **On Edit**: \`\`\`${editedMess}\`\`\` `};
 
     console.log(logtofile);
 
@@ -51,7 +54,7 @@ export default async function logs(oldMess,newMess,LOGCHANNEL_ID,logtofile){
                 for(let item of jsonelement){
                     logs.push(item);
                 }
-                
+
                 logs.push(newData);                     //file contents with new data
                 let res = JSON.stringify(logs);
                 fs.writeFileSync(fileName,res,"utf-8");
