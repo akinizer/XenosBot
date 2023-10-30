@@ -22,18 +22,29 @@ export default async function logs(oldMess,newMess,LOGCHANNEL_ID,logtofile){
         embedMessage.addFields(`Extensions:`,`${newMess.attachments.map(a=>a.url)}`,true);
     }
     
+    let newData = {"oldMess":oldMess,"newMess":newMess,"author":newMess.author,"channel":LOGCHANNEL_ID};
+
     if(logtofile){
-        console.log("Logging to file...");
 
-        //store edited messages
-        let editedjson = fs.readFileSync(fileName,"utf-8");
-        
-        let logs = [];
-        logs.push(JSON.parse(editedjson));
+        //if file doesnt exist, format: {JSON}
+        if (!fs.existsSync(fileName)) {
+            console.log("Creating edited.json with new data...")
+            fs.writeFileSync(fileName,JSON.stringify(newData));
+        }
 
-        logs.push({"oldMess":oldMess,"newMess":newMess,"author":newMess.author,"channel":LOGCHANNEL_ID});
-        editedjson = JSON.stringify(logs);
-        fs.writeFileSync(fileName,editedjson,"utf-8");
+        //append data, format: [ {JSON_1}, {JSON_2}, ... {JSON_N} ]
+        else{
+            console.log("Logging to file...");
+
+            //store edited messages
+            let editedjson = fs.readFileSync(fileName,"utf-8");
+            
+            let logs = [];
+            logs.push(JSON.parse(editedjson));  //file contents
+            logs.push(newData); //file contents with new data
+            editedjson = JSON.stringify(logs);
+            fs.writeFileSync(fileName,editedjson,"utf-8");
+        }
     }
 
     //send edited message as a log to log channel with channelID
