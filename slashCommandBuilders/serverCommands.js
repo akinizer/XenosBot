@@ -1,7 +1,7 @@
-export default [{
+export default [{//IN-USE
     name: "help",
     description: "open commands help"
-},{
+},{//IN-USE
     name: "logs",
     description: "display server logs for a channel ( created, edited removed )"
 },{

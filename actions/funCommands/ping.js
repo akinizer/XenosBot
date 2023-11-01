@@ -1,3 +1,3 @@
-export default async function hey(interaction){
-    await interaction.reply("hey you!");
+export default async function ping(interaction){
+    await interaction.reply("pong!");
 }

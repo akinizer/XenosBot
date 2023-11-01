@@ -7,12 +7,50 @@ import { SlashCommandBuilder } from "discord.js";
 import { EmbedBuilder, ActionRowBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, ButtonBuilder } from "discord.js";
 import fs from "fs";
 
+//server commands
+import alarm from "./actions/serverCommands/alarm.js";
+import faq from "./actions/serverCommands/faq.js";
+import forecast from "./actions/serverCommands/forecast.js";
 import help from "./actions/serverCommands/help.js";
+import invitedm from "./actions/serverCommands/invitedm.js";
 import logs from "./actions/serverCommands/logs.js";
 import loglist from "./actions/serverCommands/loglist.js";
+import mff from "./actions/serverCommands/mff.js";
+import poll from "./actions/serverCommands/poll.js";
+import server from "./actions/serverCommands/server.js";
+import settime from "./actions/serverCommands/settime.js";
+import time from "./actions/serverCommands/time.js";
+import twitch from "./actions/serverCommands/twitch.js";
+import when from "./actions/serverCommands/when.js";
+import who from "./actions/serverCommands/who.js";
 
-import hey from "./actions/funCommands/hey.js";
+//level commands
+import achievements from "./actions/lvlCommands/achievements.js";
+import lvl from "./actions/lvlCommands/lvl.js";
+import rank from "./actions/lvlCommands/rank.js";
+import rpg from "./actions/lvlCommands/rpg.js";
+import stats from "./actions/lvlCommands/stats.js";
+
+//entertainment commands
 import _8ball from "./actions/funCommands/_8ball.js";
+import birthday from "./actions/funCommands/birthday.js";
+import cat from "./actions/funCommands/cat.js";
+import clap from "./actions/funCommands/clap.js";
+import dog from "./actions/funCommands/dog.js";
+import facepalm from "./actions/funCommands/facepalm.js";
+import hey from "./actions/funCommands/hey.js";
+import hug from "./actions/funCommands/hug.js";
+import joke from "./actions/funCommands/joke.js";
+import lennyflip from "./actions/funCommands/lennyflip.js";
+import meme from "./actions/funCommands/meme.js";
+import nobully from "./actions/funCommands/nobully.js";
+import pet from "./actions/funCommands/pet.js";
+import ping from "./actions/funCommands/ping.js";
+import playyt from "./actions/funCommands/playyt.js";
+import roll from "./actions/funCommands/roll.js";
+import shrug from "./actions/funCommands/shrug.js";
+import tableflip from "./actions/funCommands/tableflip.js";
+import tableunflip from "./actions/funCommands/tableunflip.js";
 
 // SETTINGS //
 
@@ -239,11 +277,15 @@ client.on("interactionCreate", async interaction=>{
      }
 
     if(interaction.commandName==="ping"){
-        interaction.reply("pong");
+        ping("pong");
     }
     
     if(interaction.commandName==="8ball"){
         _8ball(interaction);
+    }
+
+    if(interaction.commandName==="birthday"){
+        birthday(interaction);
     }
 
     // LEVELING COMMANDS

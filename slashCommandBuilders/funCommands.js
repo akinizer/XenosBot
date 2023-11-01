@@ -1,4 +1,4 @@
-export default [{
+export default [{//IN-USE
     name: "hey",
     description: "reply with encantado"
 },{
@@ -7,7 +7,7 @@ export default [{
 },{
     name: "joke",
     description: "make a smile on your face"
-},{
+},{//IN-USE
     name: "8ball",
     description: "ask a question for a wisdom",
     options: [{
@@ -46,9 +46,25 @@ export default [{
 },{
     name: "playyt",
     description: "play a video via a YouTube link"
-},{
-    name: "birthday",
-    description: "wish a happy birthday"
+},{//IN-USE
+    name: "birthday",                               
+    description: "wish a happy birthday",
+    options: [{
+        name: "theme",
+        description: "select theme",
+        type: 3,
+        required: false,
+        choices: [{
+            name: "cat",
+            value: "cat" 
+        },{
+            name: "dog",
+            value: "dog" 
+        },{
+            name: "moe",
+            value: "moe" 
+        }] 
+    }]
 },{
     name: "pet",
     description: "pet a person you like"
