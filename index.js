@@ -272,20 +272,62 @@ client.on("interactionCreate", async interaction=>{
     // DEFINED COMMANDS: /hey, /ping, /help
 
     // FUN COMMANDS
-    if(interaction.commandName==="hey"){
-        hey(interaction);
-     }
-
-    if(interaction.commandName==="ping"){
-        ping("pong");
-    }
-    
     if(interaction.commandName==="8ball"){
         _8ball(interaction);
     }
-
     if(interaction.commandName==="birthday"){
         birthday(interaction);
+    }
+    if(interaction.commandName==="cat"){
+        cat(interaction);
+    }
+    if(interaction.commandName==="clap"){
+        clap(interaction);
+    }
+    if(interaction.commandName==="dog"){
+        dog(interaction);
+    }
+    if(interaction.commandName==="facepalm"){
+        facepalm(interaction);
+    }
+    if(interaction.commandName==="hey"){
+        hey(interaction);
+    }
+    if(interaction.commandName==="hug"){
+        hug(interaction);
+    }
+    if(interaction.commandName==="joke"){
+        joke(interaction);
+    }
+    if(interaction.commandName==="lennyflip"){
+        lennyflip(interaction);
+    }
+    if(interaction.commandName==="meme"){
+        meme(interaction);
+    }
+    if(interaction.commandName==="nobully"){
+        nobully(interaction);
+    }
+    if(interaction.commandName==="pet"){
+        pet(interaction);
+    }
+    if(interaction.commandName==="ping"){
+        ping(interaction);
+    }
+    if(interaction.commandName==="playyt"){
+        playyt(interaction);
+    }
+    if(interaction.commandName==="roll"){
+        roll(interaction);
+    }
+    if(interaction.commandName==="shrug"){
+        shrug(interaction);
+    }
+    if(interaction.commandName==="tableflip"){
+        tableflip(interaction);
+    }
+    if(interaction.commandName==="tableunflip"){
+        tableunflip(interaction);
     }
 
     // LEVELING COMMANDS

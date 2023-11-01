@@ -1,3 +1,11 @@
 export default async function hey(interaction){
-    await interaction.reply("hey you!");
+    let cats=[
+        "",
+        "",
+        "",
+        "",
+        ""
+    ];
+
+    await interaction.reply(cats[Math.floor(Math.random()*cats.length)]);
 }
