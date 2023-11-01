@@ -2,9 +2,9 @@ import {REST,Routes} from "discord.js";
 import dotenv from "dotenv";
 dotenv.config();
 
-import funCommands from "./commands/funCommands.js";
-import lvlCommands from "./commands/lvlCommands.js";
-import serverCommands from "./commands/serverCommands.js";
+import funCommands from "./slashCommandBuilders/funCommands.js";
+import lvlCommands from "./slashCommandBuilders/lvlCommands.js";
+import serverCommands from "./slashCommandBuilders/serverCommands.js";
 
 // bot token to connect to connect client and discord server; server id to run in channels; app id of bot
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;

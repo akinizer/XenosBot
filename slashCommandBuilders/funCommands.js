@@ -9,7 +9,28 @@ export default [{
     description: "make a smile on your face"
 },{
     name: "8ball",
-    description: "ask a question for a wisdom"
+    description: "ask a question for a wisdom",
+    options: [{
+        name: "question",
+        description: "provide your question",
+        type: 3,
+        required: true, 
+    },{
+        name: "type",
+        description: "provide question type",
+        type: 3,
+        required: false,
+        choices: [{
+            name: "love",
+            value: "love" 
+        },{
+            name: "future",
+            value: "future" 
+        },{
+            name: "career",
+            value: "career" 
+        }] 
+    }]
 },{
     name: "cat",
     description: "generate a funny cat image"

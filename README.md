@@ -20,3 +20,4 @@ Slash Commands:
 * hey
 * edit log list
 * help
+* 8ball with question and type as options

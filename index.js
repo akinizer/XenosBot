@@ -12,6 +12,7 @@ import logs from "./actions/serverCommands/logs.js";
 import loglist from "./actions/serverCommands/loglist.js";
 
 import hey from "./actions/funCommands/hey.js";
+import _8ball from "./actions/funCommands/_8ball.js";
 
 // SETTINGS //
 
@@ -234,11 +235,15 @@ client.on("interactionCreate", async interaction=>{
 
     // FUN COMMANDS
     if(interaction.commandName==="hey"){
-       hey(interaction);
-    }
+        hey(interaction);
+     }
 
     if(interaction.commandName==="ping"){
         interaction.reply("pong");
+    }
+    
+    if(interaction.commandName==="8ball"){
+        _8ball(interaction);
     }
 
     // LEVELING COMMANDS
@@ -250,6 +255,8 @@ client.on("interactionCreate", async interaction=>{
 
     if(interaction.commandName==="logs"){
         loglist(interaction);
-    }
+    } 
+    
+ 
     
 });
