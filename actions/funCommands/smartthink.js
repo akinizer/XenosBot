@@ -1,4 +1,4 @@
-export default async function smartthink(interaction){
+export default async (interaction) =>{
     let list=[
       "https://media.tenor.com/A-hmqpTFTDoAAAAd/dr-house.gif",
       "https://media.tenor.com/QLbV11ltA8cAAAAC/smart-thinking.gif",

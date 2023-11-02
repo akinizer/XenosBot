@@ -1,4 +1,4 @@
-export default async function hug(interaction){
+export default async (interaction) =>{
     let list=[
      "https://media.tenor.com/xhWYJa3S_oYAAAAC/anime-hug.gif",
      "https://media.tenor.com/pOXWNxMvQSAAAAAC/anime-hug.gif",

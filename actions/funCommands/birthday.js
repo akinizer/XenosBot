@@ -1,4 +1,4 @@
-export default async function birthday(interaction){
+export default async (interaction) =>{
     let cats=[
         "https://media.istockphoto.com/id/1157775247/vector/happy-black-cat-with-cake-and-lettering-happy-birthday-vector-illustration-eps-10.jpg?s=612x612&w=0&k=20&c=_YV-swDq1ELcnIfDbyJr5mOcBntJ8qZNLDc7TKsrjZQ=",
         "https://m.media-amazon.com/images/I/71viqGAtnYL.jpg",

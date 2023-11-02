@@ -1,4 +1,4 @@
-export default async function facepalm(interaction){
+export default async (interaction) =>{
     let list=[
       "https://i.pinimg.com/originals/ae/47/6d/ae476d8033bcf74d4a8dbad7741eaeaa.gif",
       "https://media4.giphy.com/media/TJawtKM6OCKkvwCIqX/giphy.gif?cid=6c09b952n4rs5py6zcba6kbdmdo2qk0z715ubmnixqhg5ddw&ep=v1_gifs_search&rid=giphy.gif&ct=g",

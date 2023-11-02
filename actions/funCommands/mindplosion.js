@@ -1,4 +1,4 @@
-export default async function mindplosion(interaction){
+export default async (interaction) =>{
     let list=[
       "https://mathigon.org/content/exploding-dots/images/mind-blown.gif",
       "https://media.tenor.com/MFE6UiMEpRoAAAAC/math-zack-galifianakis.gif",

@@ -1,4 +1,4 @@
-export default async function tableunflip(interaction){
+export default async (interaction) =>{
     let list=[
         "https://media.tenor.com/DLALXtJ4mEgAAAAM/toska-toskamiri.gif",
         "https://i.gifer.com/yCb.gif"

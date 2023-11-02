@@ -1,4 +1,4 @@
-export default async function _8ball(interaction){
+export default async (interaction) =>{
     let answers = ["Yes","No","Maybe","Unlikely","Try Again","Uncertain","Possible","Definitely","Indeed","Undoubtly","Certainly","Unfortunately"];
     let rand = answers[Math.floor(Math.random()*answers.length)];
 

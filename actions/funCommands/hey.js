@@ -1,4 +1,4 @@
-export default async function hey(interaction){
+export default async (interaction) =>{
     let list=[
       "https://i.imgur.com/UcGioIH.gif",
       "https://static.wikia.nocookie.net/58b790d6-b75f-4e31-8645-92061d1f0f28/scale-to-width/755",

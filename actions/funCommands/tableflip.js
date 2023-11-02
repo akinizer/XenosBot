@@ -1,4 +1,4 @@
-export default async function tableflip(interaction){
+export default async (interaction) =>{
     let list=[
         "https://media3.giphy.com/media/e24Q8FKE2mxRS/giphy.gif",
         "https://media2.giphy.com/media/uKT0MWezNGewE/giphy.gif?cid=6c09b952mqbooo03a1rn2tvmx4lwxuyi96l2689bx1f73yr7&ep=v1_gifs_search&rid=giphy.gif&ct=g",

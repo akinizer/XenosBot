@@ -2,7 +2,7 @@ import { dirname } from "path";
 import { fileURLToPath } from 'url';
 import { AttachmentBuilder } from "discord.js";
 
-export default async function dog(interaction){
+export default async (interaction) =>{
 
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);

@@ -1,4 +1,4 @@
-export default async function pet(interaction){
+export default async (interaction) =>{
     let list=[
       "https://media.tenor.com/nwbxEGQINOsAAAAM/pet-dog.gif",
       "https://media.tenor.com/ZgSfSNcJ9KIAAAAC/pat-cute.gif",
