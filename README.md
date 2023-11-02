@@ -21,3 +21,4 @@ Slash Commands:
 * edit log list
 * help
 * 8ball with question and type as options
+* /cat: random adorable cat image via attachment method # credits to MeowIRL

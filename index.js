@@ -5,7 +5,6 @@ dotenv.config();
 import { Client, GatewayIntentBits, Collection, ActivityType, REST, Routes } from "discord.js";
 import { SlashCommandBuilder } from "discord.js";
 import { EmbedBuilder, ActionRowBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, ButtonBuilder } from "discord.js";
-import fs from "fs";
 
 //server commands
 import alarm from "./actions/serverCommands/alarm.js";
