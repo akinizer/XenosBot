@@ -34,6 +34,7 @@ import stats from "./actions/lvlCommands/stats.js";
 import _8ball from "./actions/funCommands/_8ball.js";
 import birthday from "./actions/funCommands/birthday.js";
 import cat from "./actions/funCommands/cat.js";
+import cheer from "./actions/funCommands/cheer.js";
 import clap from "./actions/funCommands/clap.js";
 import dog from "./actions/funCommands/dog.js";
 import facepalm from "./actions/funCommands/facepalm.js";
@@ -42,12 +43,14 @@ import hug from "./actions/funCommands/hug.js";
 import joke from "./actions/funCommands/joke.js";
 import lennyflip from "./actions/funCommands/lennyflip.js";
 import meme from "./actions/funCommands/meme.js";
+import mindplosion from "./actions/funCommands/mindplosion.js";
 import nobully from "./actions/funCommands/nobully.js";
 import pet from "./actions/funCommands/pet.js";
 import ping from "./actions/funCommands/ping.js";
 import playyt from "./actions/funCommands/playyt.js";
 import roll from "./actions/funCommands/roll.js";
 import shrug from "./actions/funCommands/shrug.js";
+import smartthink from "./actions/funCommands/smartthink.js";
 import tableflip from "./actions/funCommands/tableflip.js";
 import tableunflip from "./actions/funCommands/tableunflip.js";
 
@@ -280,6 +283,9 @@ client.on("interactionCreate", async interaction=>{
     if(interaction.commandName==="cat"){
         cat(interaction);
     }
+    if(interaction.commandName==="cheer"){
+        cheer(interaction);
+    }
     if(interaction.commandName==="clap"){
         clap(interaction);
     }
@@ -304,6 +310,9 @@ client.on("interactionCreate", async interaction=>{
     if(interaction.commandName==="meme"){
         meme(interaction);
     }
+    if(interaction.commandName==="mindplosion"){
+        mindplosion(interaction);
+    }
     if(interaction.commandName==="nobully"){
         nobully(interaction);
     }
@@ -321,6 +330,9 @@ client.on("interactionCreate", async interaction=>{
     }
     if(interaction.commandName==="shrug"){
         shrug(interaction);
+    }
+    if(interaction.commandName==="smartthink"){
+        smartthink(interaction);
     }
     if(interaction.commandName==="tableflip"){
         tableflip(interaction);

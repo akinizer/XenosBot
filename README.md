@@ -14,11 +14,26 @@ Prefix Commands:
 * streamer mode for Twitch,
 * edit autologger for a logging channel
 
-Slash Commands:
-* greeting command
-* ping-pong
-* hey
-* edit log list
-* help
-* 8ball with question and type as options
-* /cat: random adorable cat image via attachment method # credits to MeowIRL
+Slash Fun Commands:
+* /8ball: ask a question with a type to get an advice
+* /birthday: celebrate birthday with a sincere reaction
+* /cat: generate a random adorable cat (credits to MeowIRL for cat images)
+* /cheer: cheer and raise a toast
+* /dog: generate a random heartwarming dog
+* /facepalm: show your facepalm reaction
+* /hey: greet someone with your sincerity
+* /hug: send your virtual hug with love
+* /lennyflip: ultimate flip reaction
+* /mindplosion: react with overflowing mental thoughts
+* /nobully: warn someone
+* /pet: pat a friend with adorbs
+* /ping: show a ping-pong invasion reaction
+* /roll: roll a dice 1-6 and generate the result
+* /shrug: show you have no clue at a particular topic
+* /smartthink: react with a supportive wisdom
+* /tableflip: flip that table
+* /tableunflip: put that table back
+
+Slash Server Commands:
+* /help: get usage information about Xenos
+* automatic logging for edited messages

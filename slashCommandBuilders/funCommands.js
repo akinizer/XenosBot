@@ -92,4 +92,13 @@ export default [{//IN-USE
 },{
     name: "facepalm",
     description: "react with a facepalm"
+},{
+    name: "cheer",
+    description: "react with a cheer"
+},{
+    name: "smartthink",
+    description: "react with a smart thinking"
+},{
+    name: "mindplosion",
+    description: "react with an explosive mind"
 }];

@@ -1,3 +1,3 @@
-export default async function hey(interaction){
-    await interaction.reply("hey you!");
+export default async function nobully(interaction){
+    await interaction.reply("https://i.imgur.com/3gyGi2s.gif");
 }

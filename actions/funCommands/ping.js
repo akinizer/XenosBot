@@ -1,3 +1,3 @@
 export default async function ping(interaction){
-    await interaction.reply("pong!");
+    await interaction.reply("https://cdn.dribbble.com/users/1745132/screenshots/3836421/wrong_game.gif!");
 }

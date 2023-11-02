@@ -1,3 +1,3 @@
-export default async function hey(interaction){
-    await interaction.reply("hey you!");
+export default async function lennyflip(interaction){
+    await interaction.reply("https://media.tenor.com/PDiFTW4XXRwAAAAC/table-flip-machine.gif");
 }

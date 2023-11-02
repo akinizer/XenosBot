@@ -1,7 +1,6 @@
-import fs from "fs";
-import path,{dirname} from "path";
+import { dirname } from "path";
 import { fileURLToPath } from 'url';
-import Discord,{ EmbedBuilder, AttachmentBuilder } from "discord.js";
+import { AttachmentBuilder } from "discord.js";
 
 export default async function hey(interaction){
 
